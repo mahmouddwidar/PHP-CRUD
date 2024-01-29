@@ -1,15 +1,7 @@
 <?php
 if(isset($_GET["id"]) && !empty($_GET["id"])) {
+    include 'config.php';
     $id = trim($_GET['id']);
-    $dbhost = 'localhost';
-    $dbuser = 'root';
-    $dbpass = '';
-    $dbname = 'day4';
-    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-
-    if(!$conn) {
-        die("Coouldn't Connect: ".mysqli_error($conn));
-    }
 
     mysqli_select_db($conn, $dbname);
     

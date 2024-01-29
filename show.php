@@ -24,15 +24,7 @@
 </html>
 
 <?php
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$dbname = 'day4';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-
-if(!$conn) {
-    die("Coouldn't Connect: ".mysqli_error($conn));
-}
+include 'config.php';
 
 $selectQuery = "SELECT user_id, user_name, user_email, user_gender, mail_status FROM users";
 mysqli_select_db($conn,$dbname);
